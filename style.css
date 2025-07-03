@@ -33,6 +33,11 @@ h1 {
   font-weight: 700;
   color: var(--light);
 }
+h2 {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--text);
+}
 body {
   color: #fff;
 }
@@ -50,9 +55,26 @@ body {
   font-size: 16px;
   font-weight: 600;
   transition: 0.3s ease, color 0.3s ease;
+  cursor: pointer;
 }
 
-.btn:hover {
+.a-btn {
+  display: inline-block;
+  background-color: var(--primary);
+  padding: 16px 24px;
+  border-radius: 10px;
+  color: var(--light);
+  text-decoration: none;
+  font-weight: bold;
+  font-family: var(--body-font);
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease, color 0.3s ease;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.btn:hover, .a-btn:hover {
   background-color: #6e3e22; /* Slightly darker than primary */
   color: #ffffff; /* Optional if you want it to stay white */
 }
@@ -220,6 +242,69 @@ body {
   font-size: 14px;
   color: #ddd;
 }
+
 .about {
-  height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.about-image {
+  flex: 1 1 45%;
+}
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1 1 50%;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: var(--heading-font);
+  color: var(--text);
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: var(--text);
+  font-family: var(--body-font);
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: var(--text);
+  font-family: var(--body-font);
+}
+
+.feature-item img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
