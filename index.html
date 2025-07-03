@@ -10,6 +10,16 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -133,7 +143,189 @@
         </div>
       </div>
     </section>
-
     <!-- ******************************About********************************** -->
+    <!-- ******************************Dental needs********************************** -->
+    <section class="dental-need">
+      <div class="container-stright">
+        <div class="text-banner">
+          <h2>Complete care for all your dental needs</h2>
+          <p>
+            Delivering life-changing smiles and ensuring excellent dental health
+            with our diverse services:
+          </p>
+        </div>
+        <div class="dental-need-card-section">
+          <!-- card -->
+          <div class="card-section">
+            <div class="card-text">
+              <h2>General Dentistry</h2>
+              <p>
+                Comprehensive care for all ages, ensuring your oral health is at
+                its best
+              </p>
+              <button class="arrow-button">
+                <span>&#8599;</span>
+              </button>
+            </div>
+            <div class="card-image">
+              <img
+                src="./asset/home/Rectangle 45476.png"
+                alt="General Dentistry"
+              />
+            </div>
+          </div>
+          <!-- card -->
+          <!-- card -->
+          <div class="card-section">
+            <div class="card-text card-text-2">
+              <h2>Cosmetic Dentistry </h2>
+              <p>
+                Enhance your smile with whitening, contouring, and beautifully
+                seamless results
+              </p>
+              <button class="arrow-button">
+                <span>&#8599;</span>
+              </button>
+            </div>
+            <div class="card-image">
+              <img
+                src="./asset/home/Rectangle 45478.png"
+                alt="General Dentistry"
+              />
+            </div>
+          </div>
+          <!-- card -->
+          <!-- card -->
+          <div class="card-section">
+            <div class="card-text">
+              <h2>Teeth Straightening</h2>
+              <p>
+                Achieve a straighter, more confident smile with clear, discreet
+                aligners
+              </p>
+              <button class="arrow-button">
+                <span>&#8599;</span>
+              </button>
+            </div>
+            <div class="card-image">
+              <img
+                src="./asset/home/Rectangle 45492.png"
+                alt="General Dentistry"
+              />
+            </div>
+          </div>
+          <!-- card -->
+          <!-- card -->
+          <div class="card-section">
+            <div class="card-text card-text-2">
+              <h2>Dental Implants</h2>
+              <p>
+                Custom-designed implants for a confident smile that lasts for
+                years to come
+              </p>
+              <button class="arrow-button">
+                <span>&#8599;</span>
+              </button>
+            </div>
+            <div class="card-image">
+              <img
+                src="./asset/home/Rectangle 45494.png"
+                alt="General Dentistry"
+              />
+            </div>
+          </div>
+          <!-- card -->
+        </div>
+      </div>
+    </section>
+    <!-- ******************************Dental needs********************************** -->
+    <!-- ******************************faqs********************************** -->
+
+    <section class="faqs">
+      <div class="container-stright">
+        <div class="text-banner">
+          <h2>Complete care for all your dental needs</h2>
+          <p>
+            Delivering life-changing smiles and ensuring excellent dental health
+            with our diverse services:
+          </p>
+        </div>
+        <div class="faqs-slider-section">
+          <div class="testimonial-image">
+            <img
+              src="./asset/home/male-professional-dentist-with-gloves-mask-discuss-what-treatment-will-look-like-patient-s-teeth.jpg"
+              alt="Testimonial"
+            />
+          </div>
+          <div class="testimonial-slider-container">
+            <div class="testimonial-slider">
+              <!-- Testimonial Slide -->
+              <div class="testimonial-slide">
+                <div class="testimonial-content">
+                  <div class="quote-icon">❞</div>
+                  <div class="person-info">
+                    <div class="person-photo"></div>
+                    <div>
+                      <h4>John Doe</h4>
+                      <p class="position">Patient</p>
+                    </div>
+                  </div>
+                  <p class="testimonial-text">
+                    Ex maecenas orci potenti faucibus justo vitae dui
+                    suspendisse. Leo eleifend netus id; pulvinar phasellus
+                    dis...
+                  </p>
+                </div>
+              </div>
+              <!-- Testimonial Slide -->
+                <!-- Testimonial Slide -->
+              <div class="testimonial-slide">
+                <div class="testimonial-content">
+                  <div class="quote-icon">❞</div>
+                  <div class="person-info">
+                    <div class="person-photo"></div>
+                    <div>
+                      <h4>John Doe</h4>
+                      <p class="position">Patient</p>
+                    </div>
+                  </div>
+                  <p class="testimonial-text">
+                    Ex maecenas orci potenti faucibus justo vitae dui
+                    suspendisse. Leo eleifend netus id; pulvinar phasellus
+                    dis...
+                  </p>
+                </div>
+              </div>
+              <!-- Testimonial Slide -->
+              <!-- Add more slides here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ******************************faqs********************************** -->
+    <!-- **********************************Dependencies********************************** -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".testimonial-slider").slick({
+          dots: false,
+          arrows: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          adaptiveHeight: true,
+          autoplay: true, // 🔄 Enable autoplay
+          autoplaySpeed: 4000, // ⏱ Change slide every 4 seconds
+        });
+      });
+    </script>
   </body>
 </html>
