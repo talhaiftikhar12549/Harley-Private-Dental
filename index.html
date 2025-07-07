@@ -25,33 +25,37 @@
     <header class="header">
       <div class="container">
         <div class="logo">
-          <img src="./asset//home/image 8.png" alt="logo" />
+          <img src="./asset/home/image 8.png" alt="logo" />
         </div>
-        <nav class="navbar">
+
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+
+        <nav class="navbar mobile-nav" id="navbar">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About Us</a></li>
             <li class="dropdown">
               <a href="#">Our Services ▾</a>
-              <!-- You can expand dropdown here -->
             </li>
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
-        <div>
+
+        <div class="desktop-btn">
           <a href="#" class="btn">Contact Us</a>
         </div>
       </div>
     </header>
     <section class="hero">
-      <video autoplay muted loop playsinline class="hero-video">
+      <!-- <video autoplay muted loop playsinline class="hero-video">
         <source
           src="./asset/home/4010343-uhd_4096_2160_25fps.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
-      </video>
+      </video> -->
+      <figure><img src="asset/home/banner.jpg" alt="" /></figure>
       <div class="overlay"></div>
       <div class="container">
         <div class="hero-content">
@@ -94,58 +98,57 @@
         </div>
       </div>
     </section>
-
     <!-- ******************************About********************************** -->
-    <section class="about">
-      <div class="container">
-        <div class="about-content">
-          <!-- Image -->
-          <div class="about-image">
-            <img
+    <section class="about pt80">
+      <!-- <div class="container"> -->
+      <div class="about-contents">
+        <!-- Image -->
+        <div class="about-image">
+          <!-- <img
               src="./asset/home/smiling-young-man-sitting-dentist-chair-while-doctor-examining-his-teeth.jpg"
               alt="Happy dental patient"
-            />
+            /> -->
+        </div>
+
+        <!-- Text Content -->
+        <div class="about-text">
+          <h2 class="">Gentle Dentistry, Rooted in Trust and Experience</h2>
+          <p>
+            From the moment you walk through our doors, we ensure you feel
+            relaxed and cared for. Our state-of-the-art practice located in
+            Sheffield is designed to make your experience as smooth and
+            comfortable as possible.
+          </p>
+
+          <!-- Features List -->
+          <div class="features">
+            <div class="feature-item">
+              <img src="./asset//home/Group (9).png" alt="" />
+              <span>Personalised care for every patient</span>
+            </div>
+            <div class="feature-item">
+              <img src="./asset//home/Group (9).png" alt="" />
+              <span>Clean, hygienic, and safe environment</span>
+            </div>
+            <div class="feature-item">
+              <img src="./asset//home/Group (9).png" alt="" />
+              <span>Transparent pricing & flexible payment plans</span>
+            </div>
+            <div class="feature-item">
+              <img src="./asset//home/Group (9).png" alt="" />
+              <span>Modern dental practices with advanced technology</span>
+            </div>
           </div>
-
-          <!-- Text Content -->
-          <div class="about-text">
-            <h2 class="">Gentle Dentistry, Rooted in Trust and Experience</h2>
-            <p>
-              From the moment you walk through our doors, we ensure you feel
-              relaxed and cared for. Our state-of-the-art practice located in
-              Sheffield is designed to make your experience as smooth and
-              comfortable as possible.
-            </p>
-
-            <!-- Features List -->
-            <div class="features">
-              <div class="feature-item">
-                <img src="./asset//home/Group (9).png" alt="" />
-                <span>Personalised care for every patient</span>
-              </div>
-              <div class="feature-item">
-                <img src="./asset//home/Group (9).png" alt="" />
-                <span>Clean, hygienic, and safe environment</span>
-              </div>
-              <div class="feature-item">
-                <img src="./asset//home/Group (9).png" alt="" />
-                <span>Transparent pricing & flexible payment plans</span>
-              </div>
-              <div class="feature-item">
-                <img src="./asset//home/Group (9).png" alt="" />
-                <span>Modern dental practices with advanced technology</span>
-              </div>
-            </div>
-            <div>
-              <a class="a-btn">Learn more</a>
-            </div>
+          <div>
+            <a class="a-btn">Learn more</a>
           </div>
         </div>
       </div>
+      <!-- </div> -->
     </section>
     <!-- ******************************About********************************** -->
     <!-- ******************************Dental needs********************************** -->
-    <section class="dental-need">
+    <!-- <section class="dental-need pt80">
       <div class="container-stright">
         <div class="text-banner">
           <h2>Complete care for all your dental needs</h2>
@@ -155,7 +158,6 @@
           </p>
         </div>
         <div class="dental-need-card-section">
-          <!-- card -->
           <div class="card-section">
             <div class="card-text">
               <h2>General Dentistry</h2>
@@ -174,8 +176,6 @@
               />
             </div>
           </div>
-          <!-- card -->
-          <!-- card -->
           <div class="card-section">
             <div class="card-text card-text-2">
               <h2>Cosmetic Dentistry </h2>
@@ -194,8 +194,6 @@
               />
             </div>
           </div>
-          <!-- card -->
-          <!-- card -->
           <div class="card-section">
             <div class="card-text">
               <h2>Teeth Straightening</h2>
@@ -214,8 +212,6 @@
               />
             </div>
           </div>
-          <!-- card -->
-          <!-- card -->
           <div class="card-section">
             <div class="card-text card-text-2">
               <h2>Dental Implants</h2>
@@ -234,14 +230,172 @@
               />
             </div>
           </div>
-          <!-- card -->
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ******************************Dental needs********************************** -->
+    <section class="dental-need pt80" id="dental-need">
+      <div class="container-stright">
+        <div class="text-banner">
+          <h2>Complete care for all your dental needs</h2>
+          <p>
+            Delivering life-changing smiles and ensuring excellent dental health
+            with our diverse services:
+          </p>
+        </div>
+
+        <div class="dental-need-card-section">
+          <div class="dentalWrapper" id="dentalWrapper">
+            <div class="dentalLeft" id="leftScroll">
+              <div class="scrollBoxLeft">
+                <div class="card-text">
+                  <h2>General Dentistry</h2>
+                  <p>
+                    Comprehensive care for all ages, ensuring your oral health
+                    is at its best
+                  </p>
+                  <button class="arrow-button">
+                    <span>&#8599;</span>
+                  </button>
+                </div>
+              </div>
+              <div class="scrollBoxLeft">
+                <div class="card-text card-text-2">
+                  <h2>Cosmetic Dentistry </h2>
+                  <p>
+                    Enhance your smile with whitening, contouring, and
+                    beautifully seamless results
+                  </p>
+                  <button class="arrow-button">
+                    <span>&#8599;</span>
+                  </button>
+                </div>
+              </div>
+              <div class="scrollBoxLeft">
+                <div class="card-text">
+                  <h2>Teeth Straightening</h2>
+                  <p>
+                    Achieve a straighter, more confident smile with clear,
+                    discreet aligners
+                  </p>
+                  <button class="arrow-button">
+                    <span>&#8599;</span>
+                  </button>
+                </div>
+              </div>
+              <div class="scrollBoxLeft">
+                <div class="card-text card-text-2">
+                  <h2>Dental Implants</h2>
+                  <p>
+                    Custom-designed implants for a confident smile that lasts
+                    for years to come
+                  </p>
+                  <button class="arrow-button">
+                    <span>&#8599;</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="dentalRight" id="rightScroll">
+              <div class="scrollBoxRight">
+                <div class="card-image">
+                  <img src="./asset/home/dental1.jpg" alt="General Dentistry" />
+                </div>
+              </div>
+              <div class="scrollBoxRight">
+                <div class="card-image">
+                  <img src="./asset/home/dental2.jpg" alt="General Dentistry" />
+                </div>
+              </div>
+              <div class="scrollBoxRight">
+                <div class="card-image">
+                  <img src="./asset/home/dental3.jpg" alt="General Dentistry" />
+                </div>
+              </div>
+              <div class="scrollBoxRight">
+                <div class="card-image">
+                  <img src="./asset/home/dental4.jpg" alt="General Dentistry" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dental Mobile Section -->
+        <div class="dental-need-card-section dental-for-mobile">
+          <div class="dentalWrapper">
+            <div class="dentalLeft">
+              <div class="scrollBoxLeft">
+                <div class="card-text">
+                  <h2>General Dentistry</h2>
+                  <p>
+                    Comprehensive care for all ages, ensuring your oral health
+                    is at its best
+                  </p>
+                  <button class="arrow-button">
+                    <span>&#8599;</span>
+                  </button>
+                </div>
+                <div class="card-image">
+                  <img src="./asset/home/dental1.jpg" alt="General Dentistry" />
+                </div>
+              </div>
+              <div class="scrollBoxLeft">
+                <div class="card-text card-text-2">
+                  <h2>Cosmetic Dentistry </h2>
+                  <p>
+                    Enhance your smile with whitening, contouring, and
+                    beautifully seamless results
+                  </p>
+                  <button class="arrow-button">
+                    <span>&#8599;</span>
+                  </button>
+                </div>
+                <div class="card-image">
+                  <img src="./asset/home/dental2.jpg" alt="General Dentistry" />
+                </div>
+              </div>
+              <div class="scrollBoxLeft">
+                <div class="card-text">
+                  <h2>Teeth Straightening</h2>
+                  <p>
+                    Achieve a straighter, more confident smile with clear,
+                    discreet aligners
+                  </p>
+                  <button class="arrow-button">
+                    <span>&#8599;</span>
+                  </button>
+                </div>
+                <div class="card-image">
+                  <img src="./asset/home/dental3.jpg" alt="General Dentistry" />
+                </div>
+              </div>
+              <div class="scrollBoxLeft">
+                <div class="card-text card-text-2">
+                  <h2>Dental Implants</h2>
+                  <p>
+                    Custom-designed implants for a confident smile that lasts
+                    for years to come
+                  </p>
+                  <button class="arrow-button">
+                    <span>&#8599;</span>
+                  </button>
+                </div>
+                <div class="card-image">
+                  <img src="./asset/home/dental4.jpg" alt="General Dentistry" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
     <!-- ******************************Dental needs********************************** -->
     <!-- ******************************faqs********************************** -->
 
-    <section class="faqs">
+    <section class="faqs pt80 pb80">
       <div class="container-stright">
         <div class="text-banner">
           <h2>Complete care for all your dental needs</h2>
@@ -258,45 +412,49 @@
             />
           </div>
           <div class="testimonial-slider-container">
+            <div class="quote-icon">
+              <figure><img src="asset/home/qoutes.svg" alt="" /></figure>
+            </div>
             <div class="testimonial-slider">
               <!-- Testimonial Slide -->
               <div class="testimonial-slide">
                 <div class="testimonial-content">
-                  <div class="quote-icon">❞</div>
                   <div class="person-info">
                     <div class="person-photo"></div>
-                    <div>
+                    <div class="author_info">
                       <h4>John Doe</h4>
                       <p class="position">Patient</p>
                     </div>
                   </div>
                   <p class="testimonial-text">
                     Ex maecenas orci potenti faucibus justo vitae dui
-                    suspendisse. Leo eleifend netus id; pulvinar phasellus
-                    dis...
+                    suspendisse. Leo eleifend netus id; pulvinar phasellus dis.
+                    Consequat aliquet euismod eleifend venenatis lacus
+                    sollicitudin. Torquent purus efficitur eros turpis, neque
+                    proin. Praesent sem lacinia facilisi odio arcu ligula nunc,
+                    libero dui.
                   </p>
                 </div>
               </div>
-              <!-- Testimonial Slide -->
-                <!-- Testimonial Slide -->
               <div class="testimonial-slide">
                 <div class="testimonial-content">
-                  <div class="quote-icon">❞</div>
                   <div class="person-info">
                     <div class="person-photo"></div>
-                    <div>
+                    <div class="author_info">
                       <h4>John Doe</h4>
                       <p class="position">Patient</p>
                     </div>
                   </div>
                   <p class="testimonial-text">
                     Ex maecenas orci potenti faucibus justo vitae dui
-                    suspendisse. Leo eleifend netus id; pulvinar phasellus
-                    dis...
+                    suspendisse. Leo eleifend netus id; pulvinar phasellus dis.
+                    Consequat aliquet euismod eleifend venenatis lacus
+                    sollicitudin. Torquent purus efficitur eros turpis, neque
+                    proin. Praesent sem lacinia facilisi odio arcu ligula nunc,
+                    libero dui.
                   </p>
                 </div>
               </div>
-              <!-- Testimonial Slide -->
               <!-- Add more slides here -->
             </div>
           </div>
@@ -304,6 +462,115 @@
       </div>
     </section>
     <!-- ******************************faqs********************************** -->
+
+    <!-- ******************************Your Smile********************************** -->
+    <section class="cta">
+      <div class="ctaBox">
+        <div class="text-banner">
+          <h2>Your Smile Could Be Next</h2>
+          <p>
+            Join hundreds of happy patients across Sheffield <br />We’re here to
+            help you feel good about your smile again
+          </p>
+        </div>
+        <a href="#" class="btn">Book Free Consultation</a>
+      </div>
+    </section>
+
+    <!-- ******************************The Experts Behind Your Smile********************************** -->
+    <section class="expertsSection pt80">
+      <div class="text-banner">
+        <h2>The Experts Behind Your Smile</h2>
+        <p>
+          Get to know the faces that make Harley Private Dental the trusted
+          practice it is today
+        </p>
+      </div>
+      <div class="expertsSlider">
+        <ul>
+          <li><img src="asset/home/team1.jpg" alt="" /></li>
+          <li><img src="asset/home/team2.jpg" alt="" /></li>
+          <li><img src="asset/home/team3.jpg" alt="" /></li>
+          <li><img src="asset/home/team4.jpg" alt="" /></li>
+          <li><img src="asset/home/team5.jpg" alt="" /></li>
+          <!-- <li><img src="asset/home/team1.jpg" alt="" /></li> -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ******************************Your Local Private Dental Clinic********************************** -->
+    <section class="dentalClinic pt80">
+      <div class="text-banner">
+        <h2>Your Local Private Dental Clinic</h2>
+        <p>
+          Visit us in Sheffield for expert care in a calm, modern setting. We're
+          easy to find and always happy to welcome <br />new patients
+        </p>
+      </div>
+      <div class="mapsection">
+        <div class="location">
+          <div class="working_hours">
+            <h3>Working Hours</h3>
+            <ul>
+              <li>
+                <strong>Monday To friday</strong><span>80:00 - 20:00</span>
+              </li>
+              <li><strong>Saturday</strong><span>90:00 - 17:00</span></li>
+              <li><strong>Sunday</strong><span>Closed</span></li>
+            </ul>
+          </div>
+          <div class="working_hours">
+            <h3>Location</h3>
+            <p>
+              Harley Private Dental<br />
+              42 Kingfield Road<br />
+              Nether Edge, Sheffield, S11 9AS
+            </p>
+          </div>
+          <div class="working_hours">
+            <h3>Call</h3>
+            <p>Telephone: 01145514000</p>
+          </div>
+        </div>
+        <div class="map">
+          <!-- <figure><img src="asset/home/map.jpg" alt="map"></figure> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ******************************A Peek Inside Our Practice********************************** -->
+    <section class="expertsSection pt80 pb80">
+      <div class="text-banner">
+        <h2>A Peek Inside Our Practice</h2>
+        <p>
+          Get a glimpse of our clinic, team, and smile makeovers on our
+          Instagram
+        </p>
+      </div>
+      <div class="ourPractice">
+        <ul>
+          <li><img src="asset/home/inside1.jpg" alt="" /></li>
+          <li><img src="asset/home/inside2.jpg" alt="" /></li>
+          <li><img src="asset/home/inside3.jpg" alt="" /></li>
+          <li><img src="asset/home/inside4.jpg" alt="" /></li>
+          <li><img src="asset/home/inside1.jpg" alt="" /></li>
+        </ul>
+      </div>
+      <a href="#" class="btn">Follow Us On Instagram</a>
+    </section>
+
+    <!-- ******************************Every Smile********************************** -->
+    <section class="cta">
+      <div class="ctaBox">
+        <div class="text-banner">
+          <h2>
+            Every smile has a story,<br />
+            let’s start writing yours today
+          </h2>
+        </div>
+        <a href="#" class="btn">Schedule you visit</a>
+      </div>
+    </section>
     <!-- **********************************Dependencies********************************** -->
     <script
       type="text/javascript"
@@ -314,6 +581,7 @@
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script>
+      // Testimonials slider
       $(document).ready(function () {
         $(".testimonial-slider").slick({
           dots: false,
@@ -322,9 +590,186 @@
           speed: 500,
           slidesToShow: 1,
           adaptiveHeight: true,
-          autoplay: true, // 🔄 Enable autoplay
+          autoplay: false, // 🔄 Enable autoplay
           autoplaySpeed: 4000, // ⏱ Change slide every 4 seconds
+          prevArrow:
+            '<button type="button" class="slick-prev"><img src="asset/home/pre.svg" /></button>',
+          nextArrow:
+            '<button type="button" class="slick-next"><img src="asset/home/next.svg" /></button>',
         });
+      });
+      // Expert slider
+      $(".expertsSlider ul").slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        infinite: true,
+        speed: 500,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        centerMode: true,
+        centerPadding: "100px",
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
+
+      // Our Practice slider
+
+      $(".ourPractice ul").slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        infinite: true,
+        speed: 500,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
+
+      // Moblie Menu
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("menuToggle");
+  const mobileNav = document.getElementById("navbar");
+
+  if (toggleBtn && mobileNav) {
+    // Toggle menu on button click
+    toggleBtn.addEventListener("click", (e) => {
+      e.stopPropagation(); // prevent document click
+      const isOpen = mobileNav.classList.toggle("open");
+      toggleBtn.innerHTML = isOpen ? "&times;" : "&#9776;";
+    });
+
+    // Close menu if click is outside
+    document.addEventListener("click", (e) => {
+      const isClickInsideMenu = mobileNav.contains(e.target);
+      const isClickOnToggle = toggleBtn.contains(e.target);
+
+      if (!isClickInsideMenu && !isClickOnToggle && mobileNav.classList.contains("open")) {
+        mobileNav.classList.remove("open");
+        toggleBtn.innerHTML = "&#9776;";
+      }
+    });
+  } else {
+    console.warn("menuToggle or navbar not found in DOM");
+  }
+});
+
+
+      // Scroller Section
+      
+      document.addEventListener("DOMContentLoaded", () => {
+        const wrapper = document.getElementById("dentalWrapper");
+        const leftScroll = document.getElementById("leftScroll");
+        const rightScroll = document.getElementById("rightScroll");
+
+        const scrollStep = 295;
+        let isScrollLocked = false;
+
+        // Scroll right section to bottom initially
+        rightScroll.scrollTop = rightScroll.scrollHeight;
+
+        // Check if wrapper is in viewport
+        const isInViewport = (el) => {
+          const rect = el.getBoundingClientRect();
+          return rect.top < window.innerHeight && rect.bottom > 0;
+        };
+
+        const isAtTop = () => leftScroll.scrollTop <= 0;
+
+        const isAtBottom = () => {
+          return (
+            Math.ceil(leftScroll.scrollTop) >=
+            leftScroll.scrollHeight - leftScroll.clientHeight
+          );
+        };
+        const trapScroll = (e) => {
+          if (!isInViewport(wrapper)) return;
+
+          const direction = e.deltaY > 0 ? 1 : -1;
+
+          // Allow normal scroll only if:
+          // - User is at top and scrolling up
+          // - User is at bottom and scrolling down
+          if (
+            (isAtTop() && direction === -1) ||
+            (isAtBottom() && direction === 1)
+          ) {
+            return; // Allow normal scroll
+          }
+
+          // Prevent default page scroll
+          e.preventDefault();
+
+          if (!isScrollLocked) {
+            isScrollLocked = true;
+
+            leftScroll.scrollTop += scrollStep * direction;
+            rightScroll.scrollTop -= scrollStep * direction;
+
+            setTimeout(() => {
+              isScrollLocked = false;
+            }, 300); // Delay to prevent rapid-fire scroll
+          }
+        };
+
+        // Activate scroll trap when wrapper is visible
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                window.addEventListener("wheel", trapScroll, {
+                  passive: false,
+                });
+              } else {
+                window.removeEventListener("wheel", trapScroll);
+              }
+            });
+          },
+          {
+            threshold: 0.6,
+          }
+        );
+
+        observer.observe(wrapper);
       });
     </script>
   </body>

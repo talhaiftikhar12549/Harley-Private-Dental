@@ -56,6 +56,7 @@ body {
   font-weight: 600;
   transition: 0.3s ease, color 0.3s ease;
   cursor: pointer;
+  display: inline-block;
 }
 
 .a-btn {
@@ -151,7 +152,16 @@ body {
   overflow: hidden;
 }
 
-.hero-video {
+/* .hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+} */
+section.hero figure img {
   position: absolute;
   top: 0;
   left: 0;
@@ -166,7 +176,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgb(0 0 0 / 60%);
   z-index: 1;
 }
 .hero-content {
@@ -229,6 +239,7 @@ body {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.45); /* ✨ 45% dark background */
   z-index: 1;
+  opacity: 40%;
 }
 
 .stat {
@@ -251,32 +262,42 @@ body {
 .about,
 .dental-need,
 .faqs {
-  padding: 80px 20px;
   display: flex;
   justify-content: center;
 }
 
-.about-content {
+/* .about-content {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+} */
+.about-contents {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
 .about-image {
-  flex: 1 1 45%;
+  background: url(./asset/home/smiling-young-man-sitting-dentist-chair-while-doctor-examining-his-teeth.jpg)
+    center center no-repeat;
+  background-size: cover;
+  width: 48%;
+  border-radius: 20px;
 }
-.about-image img {
+/* .about-image img {
   width: 100%;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
-}
+} */
 
 .about-text {
-  flex: 1 1 50%;
+  width: 49%;
 }
 
 .about-text h2 {
@@ -326,12 +347,12 @@ body {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  /* gap: 20px; */
 }
 
 .card-section {
   display: flex;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
@@ -344,6 +365,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  flex: 1;
 }
 .card-text-2 {
   background-color: var(--primary) !important;
@@ -390,6 +412,7 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  /* transform: scale(1.1); */
 }
 
 .testimonial-section {
@@ -420,32 +443,31 @@ body {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-  
 }
 
 .testimonial-image img {
-  width: 80%;
+  width: 100%;
   object-fit: cover;
   border-radius: 16px;
   background: #f0f0f0;
 }
 .testimonial-image {
-  width: 50%;
+  width: 48%;
 }
 
 .testimonial-content {
-  max-width: 400px;
-  text-align: left;
+  max-width: 100%;
+  text-align: center;
   position: relative;
 }
 .testimonial-slider-container {
-  width: 50%;
-  min-height: 300px;
+  width: 48%;
+  /* min-height: 300px; */
 }
-.quote-icon {
+/* .quote-icon {
   position: absolute;
   top: 0px;
-  right: 0;
+  right: 00;
   font-size: 32px;
   color: #b88b6c;
   background: #f3ece7;
@@ -455,57 +477,591 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+} */
+.quote-icon {
+  text-align: right;
 }
 
+.quote-icon figure {
+  width: 57px;
+  height: 57px;
+  background: #87522e1a;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 auto;
+}
 .person-info {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  justify-content: center;
 }
 
 .person-photo {
-  width: 40px;
-  height: 40px;
+  width: 53px;
+  height: 53px;
   background: #ccc;
   border-radius: 50%;
 }
 
 .person-info h4 {
   margin: 0;
-  font-weight: 600;
+  font-weight: 500;
+  color: #000;
+  font-family: var(--body-font);
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .position {
   font-size: 14px;
-  color: #777;
   margin: 0;
+  color: var(--primary);
+  line-height: 20px;
+  margin-top: 5px;
 }
 
 .testimonial-text {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #333;
+  font-size: 16px;
+  line-height: 132%;
+  color: #1a0b30;
 }
 
 /* Slick Custom Arrows */
-.slick-prev,
+/* .slick-prev,
 .slick-next {
   background: #b88b6c;
   border-radius: 50%;
   width: 36px;
   height: 36px;
   z-index: 1;
-}
+} */
 
-.slick-prev::before,
+/* .slick-prev::before,
 .slick-next::before {
   color: white;
   font-size: 20px;
+} */
+.testimonial-slider  button.slick-prev,.testimonial-slider button.slick-next {
+    background: var(--primary);
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    top: 120%;
+    border-radius: 50%;
+}
+.testimonial-slider button.slick-prev {
+    left: 43%;
+}
+
+.testimonial-slider button.slick-next {
+    right: 42%;
+}
+
+.testimonial-slider button.slick-prev:before, .testimonial-slider button.slick-next:before {
+    font-size: 0;
 }
 .faqs-slider-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 40px;
+}
+
+section.cta {
+  position: relative;
+  background: url("asset/home/yoursmile.jpg");
+  padding: 60px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ctaBox {
+  background: rgb(255 255 255 / 60%);
+  max-width: 755px;
+  margin: 0 auto;
+  padding: 50px 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.ctaBox .text-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ctaBox a.btn {
+  margin-top: 40px;
+}
+
+.pt80 {
+  padding-top: 80px;
+}
+.pb80 {
+  padding-bottom: 80px;
+}
+.expertsSlider ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.expertsSlider li {
+  padding: 0 15px;
+}
+
+.expertsSlider img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.expertsSlider {
+  padding: 40px 0;
+  background: var(--secondary);
+  overflow: hidden;
+}
+
+.expertsSlider ul li img {
+  border-radius: 20px;
+}
+
+section.expertsSection .text-banner {
+  margin-bottom: 30px;
+}
+
+.mapsection {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.mapsection .location {
+  padding: 50px 100px 60px 150px;
+  width: 45%;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+}
+
+.working_hours h3 {
+  font-family: var(--body-font);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
+  margin-bottom: 20px;
+  margin-top: 0;
+  color: var(--light);
+}
+
+.working_hours ul li {
+  font-size: 16px;
+  font-family: var(--body-font);
+  line-height: 155%;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--light);
+}
+
+.working_hours ul li strong {
+  font-weight: 400;
+}
+
+.working_hours p {
+  color: var(--light);
+  font-size: 16px;
+  line-height: 160%;
+}
+
+.working_hours ul li:last-child {
+  margin-bottom: 0;
+}
+
+.working_hours {
+  margin-bottom: 40px;
+}
+
+.working_hours:last-child {
+  margin-bottom: 0;
+}
+
+.map figure img {
+  width: 100%;
+}
+
+section.dentalClinic {
+  overflow: hidden;
+}
+
+.mapsection .map {
+  width: 55%;
+}
+.mapsection .map {
+  width: 55%;
+  background: url("asset/home/map.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+}
+.expertsSection {
+  text-align: center;
+}
+.expertsSection a.btn {
+  margin-top: 30px;
+}
+.ourPractice li {
+  padding: 0px;
+}
+.ourPractice li img {
+  width: 100%;
+}
+
+
+
+
+/* .dentalWrapper {
+    display: flex;
+    min-height: 590px;max-height: 590px;
+}
+.scrollBoxLeft,.scrollBoxRight {min-height: 590px;max-height: 590px;display: flex;align-items: stretch;overflow: hidden;}
+
+
+
+.dentalLeft,
+.dentalRight {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+} */
+
+.dentalWrapper {
+  display: flex;
+  height: 590px;
+  overflow: hidden;
+}
+
+.dentalLeft,
+.dentalRight {
+  flex: 1;
+  overflow: hidden; /* enable vertical scrolling */
+  scroll-behavior: smooth;
+}
+.dentalLeft::-webkit-scrollbar, .dentalRight::-webkit-scrollbar {
+    width: 0;
+}
+.dentalRight {
+  display: flex;
+  flex-direction: column-reverse;  
+  scroll-behavior: smooth;
+  border-radius: 0 15px 15px 0px;
+}
+.scrollBoxLeft,
+.scrollBoxRight {
+  min-height: 590px;
+  display: flex;
+  /* align-items: stretch; */
+  flex-direction: column;
+}
+/* div#rightScroll {
+    margin-top: -2059px;
+} */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.dental-need-card-section.dental-for-mobile {
+    display: none;
+}
+
+@media (min-width: 1024px) and (max-width: 1440px){
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+}
+@media (min-width: 768px) and (max-width: 1023px){
+.dental-need-card-section {
+    display: none;
+}
+
+.dental-need-card-section.dental-for-mobile {
+    display: block;
+}
+
+.dental-need-card-section.dental-for-mobile .dentalWrapper {
+    height: 100%;
+}
+
+.dental-need-card-section.dental-for-mobile .scrollBoxLeft {
+    min-height: auto;
+    gap: 0;
+    flex-direction: column-reverse;
+}
+
+.dental-need-card-section.dental-for-mobile .card-image img {
+    height: auto;
+    /* transform: scale(1.1); */
+    border-radius: 15px 15px 0 0;
+}
+
+.dentalLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.card-text {
+    border-radius: 0 0 15px 15px;
+}
+}
+@media (min-width: 0px) and (max-width: 767px){
+html {
+    scroll-behavior: smooth;
+}
+
+/* header.header {
+    display: none;
+} */
+
+section.hero {
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+
+.stat-icon-div {
+    flex-direction: column;
+}
+
+.stat p {}
+
+.stat-icon-div p {
+    font-size: 22px !important;
+}
+
+.stat-icon-div img {
+    max-width: 22px;
+}
+
+section {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.about-contents {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-contents .about-image,.about-contents .about-text {
+    width: 100%;
+}
+
+.about-contents .about-image {
+    height: 220px;
+}
+
+.about-text h2 {
+    font-size: 22px;
+}
+
+.about-text p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.feature-item {font-size: 16px;}
+
+h2 {
+    font-size: 22px;
+    line-height: 28px;
+}
+
+section.dental-need .text-banner h2 {
+    margin-bottom: 10px;
+}
+
+.pt80 {
+    padding-top: 40px;
+}
+
+.pb80 {
+    padding-bottom: 40px;
+}
+
+.faqs-slider-section {
+    flex-direction: column;
+}
+
+.testimonial-image,.testimonial-slider-container {
+    width: 100%;
+}
+.quote-icon {
+    margin-top: 20px;
+}
+
+.testimonial-slider {
+    margin-top: 10px;
+}
+
+.testimonial-slider-container {
+    padding-bottom: 60px;
+}
+
+.testimonial-slider button.slick-prev {
+    left: 0;
+}
+
+.testimonial-slider button.slick-next {
+    right: 0;
+}
+
+.ctaBox {
+    padding: 20px;
+    max-width: 100%;
+}
+
+.ctaBox a.btn {
+    margin-top: 20px;
+}
+
+.ctaBox .text-banner p {
+    font-size: 14px;
+}
+
+.ctaBox .text-banner p br {
+    /* display: none; */
+}
+
+section.expertsSection.pt80 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.expertsSlider {
+    padding: 15px 0;
+}
+
+.text-banner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mapsection {
+    flex-direction: column;
+}
+
+.mapsection .location {
+    width: 100%;
+    padding: 25px;
+}
+
+.mapsection .map {
+    width: 100%;
+    height: 240px;
+}
+.mobile-nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%; 
+    width: 80%;
+    height: 100%;
+    background: var(--light);
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    transition: left 0.4s ease-in-out;
+    z-index: 999;
+    padding: 60px 20px;
+  }
+
+  .mobile-nav.open {
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--light);
+  }
+
+  .desktop-btn {
+    display: none;
+  }
+  .mobile-nav ul {
+    flex-direction: column;
+}
+  .navbar ul li a {
+    color: var(--primary);
+}
+
+.dental-need-card-section {
+    display: none;
+}
+
+.dental-need-card-section.dental-for-mobile {
+    display: block;
+}
+
+.dental-need-card-section.dental-for-mobile .dentalWrapper {
+    height: 100%;
+}
+
+.dental-need-card-section.dental-for-mobile .scrollBoxLeft {
+    min-height: auto;
+    gap: 0;
+    flex-direction: column-reverse;
+}
+
+.dental-need-card-section.dental-for-mobile .card-image img {
+    height: auto;
+    /* transform: scale(1.1); */
+    border-radius: 15px 15px 0 0;
+}
+
+.dentalLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.card-text {
+    border-radius: 0 0 15px 15px;
+}
+
 }
