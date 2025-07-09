@@ -62,134 +62,129 @@ var ourPractice = new Swiper(".ourPractice", {
   },
 });
 
-
 var swiper = new Swiper(".teamSwiperSlider", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      initialSlide: 2,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 20,
-        stretch: -20,
-        depth: 120,
-        modifier: 2,
-        slideShadows: true,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    }); 
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  initialSlide: 2,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 20,
+    stretch: -20,
+    depth: 120,
+    modifier: 2,
+    slideShadows: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
 
+//Gallery
+lightGallery(document.getElementById("aniimated-thumbnials"), {
+  thumbnail: true,
+});
 
-    // Moblie Menu
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggleBtn = document.getElementById("menuToggle");
-      const mobileNav = document.getElementById("navbar");
+// Moblie Menu
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("menuToggle");
+  const mobileNav = document.getElementById("navbar");
 
-      if (toggleBtn && mobileNav) {
-        // Toggle menu on button click
-        toggleBtn.addEventListener("click", (e) => {
-          e.stopPropagation(); // prevent document click
-          const isOpen = mobileNav.classList.toggle("open");
-          toggleBtn.innerHTML = isOpen ? "&times;" : "&#9776;";
-        });
+  if (toggleBtn && mobileNav) {
+    // Toggle menu on button click
+    toggleBtn.addEventListener("click", (e) => {
+      e.stopPropagation(); // prevent document click
+      const isOpen = mobileNav.classList.toggle("open");
+      toggleBtn.innerHTML = isOpen ? "&times;" : "&#9776;";
+    });
 
-        // Close menu if click is outside
-        document.addEventListener("click", (e) => {
-          const isClickInsideMenu = mobileNav.contains(e.target);
-          const isClickOnToggle = toggleBtn.contains(e.target);
+    // Close menu if click is outside
+    document.addEventListener("click", (e) => {
+      const isClickInsideMenu = mobileNav.contains(e.target);
+      const isClickOnToggle = toggleBtn.contains(e.target);
 
-          if (
-            !isClickInsideMenu &&
-            !isClickOnToggle &&
-            mobileNav.classList.contains("open")
-          ) {
-            mobileNav.classList.remove("open");
-            toggleBtn.innerHTML = "&#9776;";
-          }
-        });
-      } else {
-        console.warn("menuToggle or navbar not found in DOM");
+      if (
+        !isClickInsideMenu &&
+        !isClickOnToggle &&
+        mobileNav.classList.contains("open")
+      ) {
+        mobileNav.classList.remove("open");
+        toggleBtn.innerHTML = "&#9776;";
       }
     });
+  } else {
+    console.warn("menuToggle or navbar not found in DOM");
+  }
+});
 
+// scroll functionality
 
+document.addEventListener("DOMContentLoaded", () => {
+  const wrapper = document.getElementById("dentalWrapper");
+  const leftScroll = document.getElementById("leftScroll");
+  const rightScroll = document.getElementById("rightScroll");
 
-    // scroll functionality
+  const scrollStep = 295;
+  let isScrollLocked = false;
+  let isWrapperVisible = false;
+  let isMouseOverWrapper = false;
 
-     document.addEventListener("DOMContentLoaded", () => {
-      const wrapper = document.getElementById("dentalWrapper");
-      const leftScroll = document.getElementById("leftScroll");
-      const rightScroll = document.getElementById("rightScroll");
+  // Scroll right section to bottom initially
+  rightScroll.scrollTop = rightScroll.scrollHeight;
 
-      const scrollStep = 295;
-      let isScrollLocked = false;
-      let isWrapperVisible = false;
-      let isMouseOverWrapper = false;
+  const isAtTop = () => leftScroll.scrollTop <= 0;
 
-      // Scroll right section to bottom initially
-      rightScroll.scrollTop = rightScroll.scrollHeight;
+  const isAtBottom = () =>
+    Math.ceil(leftScroll.scrollTop) >=
+    leftScroll.scrollHeight - leftScroll.clientHeight;
 
-      const isAtTop = () => leftScroll.scrollTop <= 0;
+  const trapScroll = (e) => {
+    // 👇 Activate scroll only if wrapper is visible AND mouse is over wrapper
+    if (!isWrapperVisible || !isMouseOverWrapper) return;
 
-      const isAtBottom = () =>
-        Math.ceil(leftScroll.scrollTop) >=
-        leftScroll.scrollHeight - leftScroll.clientHeight;
+    const direction = e.deltaY > 0 ? 1 : -1;
 
-      const trapScroll = (e) => {
-        // 👇 Activate scroll only if wrapper is visible AND mouse is over wrapper
-        if (!isWrapperVisible || !isMouseOverWrapper) return;
+    if ((isAtTop() && direction === -1) || (isAtBottom() && direction === 1)) {
+      return; // Let page scroll naturally
+    }
 
-        const direction = e.deltaY > 0 ? 1 : -1;
+    e.preventDefault();
 
-        if (
-          (isAtTop() && direction === -1) ||
-          (isAtBottom() && direction === 1)
-        ) {
-          return; // Let page scroll naturally
-        }
+    if (!isScrollLocked) {
+      isScrollLocked = true;
 
-        e.preventDefault();
+      leftScroll.scrollTop += scrollStep * direction;
+      rightScroll.scrollTop -= scrollStep * direction;
 
-        if (!isScrollLocked) {
-          isScrollLocked = true;
+      setTimeout(() => {
+        isScrollLocked = false;
+      }, 300);
+    }
+  };
 
-          leftScroll.scrollTop += scrollStep * direction;
-          rightScroll.scrollTop -= scrollStep * direction;
-
-          setTimeout(() => {
-            isScrollLocked = false;
-          }, 300);
-        }
-      };
-
-      // IntersectionObserver to check if dentalWrapper is in viewport
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            isWrapperVisible = entry.isIntersecting;
-          });
-        },
-        {
-          threshold: 0.7, // At least 70% should be visible
-        }
-      );
-
-      observer.observe(wrapper);
-
-      // Mouse enter/leave listeners
-      wrapper.addEventListener("mouseenter", () => {
-        isMouseOverWrapper = true;
+  // IntersectionObserver to check if dentalWrapper is in viewport
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        isWrapperVisible = entry.isIntersecting;
       });
+    },
+    {
+      threshold: 0.7, // At least 70% should be visible
+    }
+  );
 
-      wrapper.addEventListener("mouseleave", () => {
-        isMouseOverWrapper = false;
-      });
+  observer.observe(wrapper);
 
-      // Global scroll listener
-      window.addEventListener("wheel", trapScroll, { passive: false });
-    });
-  
+  // Mouse enter/leave listeners
+  wrapper.addEventListener("mouseenter", () => {
+    isMouseOverWrapper = true;
+  });
 
+  wrapper.addEventListener("mouseleave", () => {
+    isMouseOverWrapper = false;
+  });
 
+  // Global scroll listener
+  window.addEventListener("wheel", trapScroll, { passive: false });
+});
