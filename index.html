@@ -398,56 +398,103 @@
       </div>
       <div class="faqs-slider-section">
         <div class="testimonial-image">
-          <img
-            src="./asset/home/testi.jpg"
-            alt="Testimonial" />
+          <img src="./asset/home/testi.jpg" alt="Testimonial" />
         </div>
         <div class="testimonial-slider-container">
           <div class="quote-icon">
             <figure><img src="asset/home/qoutes.svg" alt="" /></figure>
           </div>
-          <div class="testimonial-slider">
-            <!-- Testimonial Slide -->
-            <div class="testimonial-slide">
-              <div class="testimonial-content">
-                <div class="person-info">
-                  <div class="person-photo"></div>
-                  <div class="author_info">
-                    <h4>John Doe</h4>
-                    <p class="position">Patient</p>
+          <!-- Swiper Container -->
+          <div class="swiper testimonial-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-content">
+                  <div class="person-info">
+                    <div class="person-photo"></div>
+                    <div class="author_info">
+                      <h4>John Doe</h4>
+                      <p class="position">Patient</p>
+                    </div>
                   </div>
+                  <p class="testimonial-text">
+                    Ex maecenas orci potenti faucibus justo vitae dui suspendisse. Leo eleifend netus id; pulvinar
+                    phasellus dis. Consequat aliquet euismod eleifend venenatis lacus sollicitudin. Torquent purus
+                    efficitur eros turpis, neque proin. Praesent sem lacinia facilisi odio arcu ligula nunc, libero dui.
+                  </p>
                 </div>
-                <p class="testimonial-text">
-                  Ex maecenas orci potenti faucibus justo vitae dui
-                  suspendisse. Leo eleifend netus id; pulvinar phasellus dis.
-                  Consequat aliquet euismod eleifend venenatis lacus
-                  sollicitudin. Torquent purus efficitur eros turpis, neque
-                  proin. Praesent sem lacinia facilisi odio arcu ligula nunc,
-                  libero dui.
-                </p>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="testimonial-content">
+                  <div class="person-info">
+                    <div class="person-photo"></div>
+                    <div class="author_info">
+                      <h4>John Doe</h4>
+                      <p class="position">Patient</p>
+                    </div>
+                  </div>
+                  <p class="testimonial-text">
+                    Ex maecenas orci potenti faucibus justo vitae dui suspendisse. Leo eleifend netus id; pulvinar
+                    phasellus dis. Consequat aliquet euismod eleifend venenatis lacus sollicitudin. Torquent purus
+                    efficitur eros turpis, neque proin. Praesent sem lacinia facilisi odio arcu ligula nunc, libero dui.
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="testimonial-slide">
-              <div class="testimonial-content">
-                <div class="person-info">
-                  <div class="person-photo"></div>
-                  <div class="author_info">
-                    <h4>John Doe</h4>
-                    <p class="position">Patient</p>
-                  </div>
-                </div>
-                <p class="testimonial-text">
-                  Ex maecenas orci potenti faucibus justo vitae dui
-                  suspendisse. Leo eleifend netus id; pulvinar phasellus dis.
-                  Consequat aliquet euismod eleifend venenatis lacus
-                  sollicitudin. Torquent purus efficitur eros turpis, neque
-                  proin. Praesent sem lacinia facilisi odio arcu ligula nunc,
-                  libero dui.
-                </p>
+
+            <!-- Arrows -->
+            <div class="testiArrows">
+              <div class="swiper-button-prev">
+                <img src="asset/home/pre.svg" />
+              </div>
+              <div class="swiper-button-next">
+                <img src="asset/home/next.svg" />
               </div>
             </div>
-            <!-- Add more slides here -->
+
           </div>
+
+          <!-- <div class="testimonial-slider">
+            <div class="testimonial-slide">
+              <div class="testimonial-content">
+                <div class="person-info">
+                  <div class="person-photo"></div>
+                  <div class="author_info">
+                    <h4>John Doe</h4>
+                    <p class="position">Patient</p>
+                  </div>
+                </div>
+                <p class="testimonial-text">
+                  Ex maecenas orci potenti faucibus justo vitae dui
+                  suspendisse. Leo eleifend netus id; pulvinar phasellus dis.
+                  Consequat aliquet euismod eleifend venenatis lacus
+                  sollicitudin. Torquent purus efficitur eros turpis, neque
+                  proin. Praesent sem lacinia facilisi odio arcu ligula nunc,
+                  libero dui.
+                </p>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial-content">
+                <div class="person-info">
+                  <div class="person-photo"></div>
+                  <div class="author_info">
+                    <h4>John Doe</h4>
+                    <p class="position">Patient</p>
+                  </div>
+                </div>
+                <p class="testimonial-text">
+                  Ex maecenas orci potenti faucibus justo vitae dui
+                  suspendisse. Leo eleifend netus id; pulvinar phasellus dis.
+                  Consequat aliquet euismod eleifend venenatis lacus
+                  sollicitudin. Torquent purus efficitur eros turpis, neque
+                  proin. Praesent sem lacinia facilisi odio arcu ligula nunc,
+                  libero dui.
+                </p>
+              </div>
+            </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -776,8 +823,8 @@
         Instagram
       </p>
     </div>
-    <div class="ourPractice">
-      <ul>
+    <!-- <div class="ourPractice">
+      <ul class="swiper mySwiper">
         <li><img src="asset/home/inside1.jpg" alt="" /></li>
         <li><img src="asset/home/inside2.jpg" alt="" /></li>
         <li><img src="asset/home/inside3.jpg" alt="" /></li>
@@ -791,7 +838,21 @@
         <li><img src="asset/home/inside3.jpg" alt="" /></li>
         <li><img src="asset/home/inside4.jpg" alt="" /></li>
       </ul>
+    </div> -->
+    <div class="swiper ourPractice">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="asset/home/inside1.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="asset/home/inside2.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="asset/home/inside3.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="asset/home/inside4.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="asset/home/inside1.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="asset/home/inside2.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="asset/home/inside3.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="asset/home/inside4.jpg" alt="" /></div>
+        <!-- ... repeat more slides -->
+      </div>
     </div>
+
     <a href="#" class="btn">Follow Us On Instagram</a>
   </section>
 
@@ -808,17 +869,17 @@
     </div>
   </section> -->
 
-  <div class="ctaBottom pt80 pb80">
+  <section class="ctaBottom pt80 pb80">
     <div class="container-stright">
       <div class="ctaBottomText">
-          <h2>
+        <h2>
           Every smile has a story,<br />
           let’s start writing yours today
         </h2>
         <a href="#" class="btn">Schedule you visit</a>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- ******************************Footer********************************** -->
   <footer class="footer">
@@ -886,301 +947,16 @@
   </footer>
 
   <!-- **********************************Dependencies********************************** -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script>
-    // Testimonials slider
-    $(document).ready(function () {
-      $(".testimonial-slider").slick({
-        dots: false,
-        arrows: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        adaptiveHeight: true,
-        autoplay: false, // 🔄 Enable autoplay
-        autoplaySpeed: 4000, // ⏱ Change slide every 4 seconds
-        prevArrow:
-          '<button type="button" class="slick-prev"><img src="asset/home/pre.svg" /></button>',
-        nextArrow:
-          '<button type="button" class="slick-next"><img src="asset/home/next.svg" /></button>',
-      });
-    });
-    // Expert slider
-    // $(".expertsSlider ul.expertsSlider_main").slick({
-    //   slidesToShow: 4,
-    //   slidesToScroll: 1,
-    //   arrows: true,
-    //   dots: false,
-    //   infinite: true,
-    //   speed: 500,
-    //   autoplay: false,
-    //   autoplaySpeed: 3000,
-    //   centerMode: true,
-    //   centerPadding: "100px",
-    //   responsive: [
-    //     {
-    //       breakpoint: 1024,
-    //       settings: {
-    //         slidesToShow: 3,
-    //       },
-    //     },
-    //     {
-    //       breakpoint: 768,
-    //       settings: {
-    //         slidesToShow: 2,
-    //       },
-    //     },
-    //     {
-    //       breakpoint: 480,
-    //       settings: {
-    //         slidesToShow: 1,
-    //       },
-    //     },
-    //   ],
-    // });
+  <!-- jQuery and plugins -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    // Our Practice slider
-
-    $(".ourPractice ul").slick({
-      slidesToShow: 6,
-      slidesToScroll: 1,
-      arrows: false,
-      dots: false,
-      infinite: true,
-      speed: 500,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 4,
-          },
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 4,
-          },
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 4,
-          },
-        },
-      ],
-    });
-
-    // Moblie Menu
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggleBtn = document.getElementById("menuToggle");
-      const mobileNav = document.getElementById("navbar");
-
-      if (toggleBtn && mobileNav) {
-        // Toggle menu on button click
-        toggleBtn.addEventListener("click", (e) => {
-          e.stopPropagation(); // prevent document click
-          const isOpen = mobileNav.classList.toggle("open");
-          toggleBtn.innerHTML = isOpen ? "&times;" : "&#9776;";
-        });
-
-        // Close menu if click is outside
-        document.addEventListener("click", (e) => {
-          const isClickInsideMenu = mobileNav.contains(e.target);
-          const isClickOnToggle = toggleBtn.contains(e.target);
-
-          if (
-            !isClickInsideMenu &&
-            !isClickOnToggle &&
-            mobileNav.classList.contains("open")
-          ) {
-            mobileNav.classList.remove("open");
-            toggleBtn.innerHTML = "&#9776;";
-          }
-        });
-      } else {
-        console.warn("menuToggle or navbar not found in DOM");
-      }
-    });
-
-    // Scroller Section
-
-    // document.addEventListener("DOMContentLoaded", () => {
-    //   const wrapper = document.getElementById("dentalWrapper");
-    //   const leftScroll = document.getElementById("leftScroll");
-    //   const rightScroll = document.getElementById("rightScroll");
-
-    //   const scrollStep = 295;
-    //   let isScrollLocked = false;
-
-    //   // Scroll right section to bottom initially
-    //   rightScroll.scrollTop = rightScroll.scrollHeight;
-
-    //   // Check if wrapper is in viewport
-    //   const isInViewport = (el) => {
-    //     const rect = el.getBoundingClientRect();
-    //     return rect.top < window.innerHeight && rect.bottom > 0;
-    //   };
-
-    //   const isAtTop = () => leftScroll.scrollTop <= 0;
-
-    //   const isAtBottom = () => {
-    //     return (
-    //       Math.ceil(leftScroll.scrollTop) >=
-    //       leftScroll.scrollHeight - leftScroll.clientHeight
-    //     );
-    //   };
-    //   const trapScroll = (e) => {
-    //     if (!isInViewport(wrapper)) return;
-
-    //     const direction = e.deltaY > 0 ? 1 : -1;
-
-    //     // Allow normal scroll only if:
-    //     // - User is at top and scrolling up
-    //     // - User is at bottom and scrolling down
-    //     if (
-    //       (isAtTop() && direction === -1) ||
-    //       (isAtBottom() && direction === 1)
-    //     ) {
-    //       return; // Allow normal scroll
-    //     }
-
-    //     // Prevent default page scroll
-    //     e.preventDefault();
-
-    //     if (!isScrollLocked) {
-    //       isScrollLocked = true;
-
-    //       leftScroll.scrollTop += scrollStep * direction;
-    //       rightScroll.scrollTop -= scrollStep * direction;
-
-    //       setTimeout(() => {
-    //         isScrollLocked = false;
-    //       }, 300); // Delay to prevent rapid-fire scroll
-    //     }
-    //   };
-
-    //   // Activate scroll trap when wrapper is visible
-    //   const observer = new IntersectionObserver(
-    //     (entries) => {
-    //       entries.forEach((entry) => {
-    //         if (entry.isIntersecting) {
-    //           window.addEventListener("wheel", trapScroll, {
-    //             passive: false,
-    //           });
-    //         } else {
-    //           window.removeEventListener("wheel", trapScroll);
-    //         }
-    //       });
-    //     },
-    //     {
-    //       threshold: 0.6,
-    //     }
-    //   );
-
-    //   observer.observe(wrapper);
-    // });
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const wrapper = document.getElementById("dentalWrapper");
-      const leftScroll = document.getElementById("leftScroll");
-      const rightScroll = document.getElementById("rightScroll");
-
-      const scrollStep = 295;
-      let isScrollLocked = false;
-      let isWrapperVisible = false;
-      let isMouseOverWrapper = false;
-
-      // Scroll right section to bottom initially
-      rightScroll.scrollTop = rightScroll.scrollHeight;
-
-      const isAtTop = () => leftScroll.scrollTop <= 0;
-
-      const isAtBottom = () =>
-        Math.ceil(leftScroll.scrollTop) >=
-        leftScroll.scrollHeight - leftScroll.clientHeight;
-
-      const trapScroll = (e) => {
-        // 👇 Activate scroll only if wrapper is visible AND mouse is over wrapper
-        if (!isWrapperVisible || !isMouseOverWrapper) return;
-
-        const direction = e.deltaY > 0 ? 1 : -1;
-
-        if (
-          (isAtTop() && direction === -1) ||
-          (isAtBottom() && direction === 1)
-        ) {
-          return; // Let page scroll naturally
-        }
-
-        e.preventDefault();
-
-        if (!isScrollLocked) {
-          isScrollLocked = true;
-
-          leftScroll.scrollTop += scrollStep * direction;
-          rightScroll.scrollTop -= scrollStep * direction;
-
-          setTimeout(() => {
-            isScrollLocked = false;
-          }, 300);
-        }
-      };
-
-      // IntersectionObserver to check if dentalWrapper is in viewport
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            isWrapperVisible = entry.isIntersecting;
-          });
-        },
-        {
-          threshold: 0.7, // At least 70% should be visible
-        }
-      );
-
-      observer.observe(wrapper);
-
-      // Mouse enter/leave listeners
-      wrapper.addEventListener("mouseenter", () => {
-        isMouseOverWrapper = true;
-      });
-
-      wrapper.addEventListener("mouseleave", () => {
-        isMouseOverWrapper = false;
-      });
-
-      // Global scroll listener
-      window.addEventListener("wheel", trapScroll, { passive: false });
-    });
-  </script>
-
-  <!-- Swiper JS -->
+  <!-- Swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".teamSwiperSlider", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      initialSlide: 2,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 20,
-        stretch: -20,
-        depth: 120,
-        modifier: 2,
-        slideShadows: true,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });   
+  <!-- Your custom JavaScript -->
+  <script src="/asset/js/script.js"></script>
 
-  </script>
 </body>
 
 </html>
