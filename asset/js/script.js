@@ -1,4 +1,3 @@
-
 var testimonialSwiper = new Swiper(".testimonial-slider", {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -100,6 +99,14 @@ $(document).ready(function () {
   } else {
     console.warn("menuToggle or navbar not found in DOM");
   }
-})
-// scroll functionality
+});
 
+//acordian
+const accordionButtons = document.querySelectorAll(".accordion-button");
+
+accordionButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const item = button.parentElement;
+    item.classList.toggle("active");
+  });
+});

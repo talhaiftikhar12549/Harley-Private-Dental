@@ -1391,6 +1391,266 @@ section.hero.ourteamhero {
 	}
 }
 
+section.your_dental_health {
+  padding: 80px 20px;
+}
+
+.your_dental_health_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.your_dental_health_image img {
+  width: 100%;
+}
+
+.your_dental_health_text h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+  line-height: 120%;
+}
+
+.your_dental_health_text p {
+  font-size: 20px;
+  line-height: 150%;
+  margin-bottom: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb3 {
+  margin-bottom: 3rem;
+}
+.services_grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+}
+
+.service_box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 30px 25px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.service_box h3 {
+  font-family: var(--body-font);
+  color: var(--dark);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.service_box p {
+  line-height: 130%;
+}
+
+.service_box a {
+  color: var(--primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-family: var(--body-font);
+  font-weight: 600;
+}
+
+img.servicebgbox {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 126px;
+  height: 126px;
+  opacity: 0;
+  transition: linear 0.3s;
+}
+
+.service_box:hover img.servicebgbox {
+  opacity: 0.06;
+}
+
+.service_box:hover {
+  background: #F2E2C1;
+  box-shadow: 0px 1px 2px 1px rgba(242, 226, 193, 0.25);
+}
+
+.bookingGrid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+}
+
+.bookingBox h3 {
+  font-family: var(--body-font);
+  color: var(--dark);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.bookingBox {
+  background: rgb(135 82 46 / 10%);
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 35px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.bookingBox p {
+  line-height: 150%;
+}
+.bookingBox figure {
+  background: var(--primary);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.your_dental_health.visiting_the_dentist h2 {
+  font-size: 36px;
+}
+
+.visiting_the_dentist h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 147.2%;
+  color: var(--dark);
+  font-family: var(--body-font);
+  margin-bottom: 20px;
+}
+.service__form {
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.form_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.form_field label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--dark);
+  font-family: var(--body-font);
+}
+
+.form_field {
+  font-family: var(--body-font);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form_field input,.form_field textarea {
+  border: 1px solid #9CA3AF;
+  border-radius: 10px;
+  padding: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  font-family: var(--body-font);
+}
+
+input.formbtn {
+  background: var(--primary);
+  color: var(--light);
+  padding: 16px 24px;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 40px;
+  font-family: var(--body-font);
+  text-transform: capitalize;
+}
+.service__page .text-center p {
+  font-size: 20px;
+}
+
+.accordion {
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accordion-item {
+  border: 1px solid #ddd;
+  border-left: 5px solid var(--primary);
+  border-radius: 10px;
+}
+
+.accordion-button {
+  cursor: pointer;
+  padding: 30px 35px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: 600;
+  background: var(--light);
+  font-family: var(--body-font);
+  border-radius: 10px;
+}
+
+.accordion-button:hover {
+  background-color: #f1ece7;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  /* background-color: #f9f6f3; */
+  color: #444;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: var(--body-font);
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+.accordion-item.active .accordion-content {
+  max-height: 300px; /* enough height to show the content */
+  padding: 10px 35px 30px 35px;
+}
+
+
+
+.accordion-item.active button.accordion-button {
+  padding-bottom: 0;
+  background: #F3EEEA;
+}
+
+.accordion-item.active {
+  background: #F3EEEA;
+}
+
 /* Media query */
 
 @media (min-width: 1024px) and (max-width: 1440px) {
@@ -1487,6 +1747,13 @@ section.hero.ourteamhero {
 
   .hiddenText h5 {
     margin-bottom: 10px;
+  }
+  .your_dental_health_grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .services_grid {
+    grid-template-columns: repeat(3,1fr);
   }
 }
 @media (min-width: 0px) and (max-width: 767px) {
@@ -1812,4 +2079,20 @@ section.hero.ourteamhero {
     font-size: 14px;
     line-height: 150%;
   }
+
+  .your_dental_health_grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .services_grid {
+    grid-template-columns: repeat(1,1fr);
+  }
+  .form_grid {
+    grid-template-columns: 1fr;
+}
+
+.bookingGrid {
+    grid-template-columns: 1fr;
+}
+
 }
