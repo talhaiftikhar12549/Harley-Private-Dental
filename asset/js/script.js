@@ -63,6 +63,33 @@ var swiper = new Swiper(".teamSwiperSlider", {
   },
 });
 
+var aboutUSSwiper = new Swiper(".about-us-swiper", {
+  direction: "horizontal",
+  slidesPerView: 1,
+  spaceBetween: 0,
+  mousewheel: true,
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
+  // breakpoints: {
+  //   768: {
+  //     slidesPerView: 2,
+  //   },
+  //   1024: {
+  //     slidesPerView: 3,
+  //   },
+  // },
+});
+
 //Gallery
 lightGallery(document.getElementById("aniimated-thumbnials"), {
   thumbnail: true,
@@ -110,3 +137,5 @@ accordionButtons.forEach((button) => {
     item.classList.toggle("active");
   });
 });
+
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harley Private Dental</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./asset/home/image 8.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--==Link Swiper's CSS====-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <!--==Using-Font-Awesome-for-Icons=========-->
+    <script
+      src="https://kit.fontawesome.com/6bd6c771de.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="about-us-page">
+    <section class="aboutHeader">
+      <!-- Toggle Menu Button (visible only on desktop) -->
+      <button class="menu-toggle" id="aboutmenuToggle">&#9776;</button>
+
+      <!-- Sidebar Menu -->
+      <div class="sidebar-menu" id="aboutsidebarMenu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu-backdrop" id="aboutmenuBackdrop"></div>
+    </section>
+    <div class="swiper about-us-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slider1">
+          <div class="progressBar"></div>
+          <div class="slide1onebg">
+            <div class="sliderMain">
+              <div class="sliderLeftSection">
+                <p class="since">Since</p>
+                <h2 class="year">1970</h2>
+              </div>
+              <div class="sliderRightSection">
+                <h5 class="boldText">About Harley private limited</h5>
+                <p>
+                  Welcome to Harley Private Dental, a modern, state-of-the-art
+                  private dental practice close to Sheffield City Centre and
+                  within easy reach of Sheffield University.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide slider2">
+          <div class="progressBar"></div>
+          <div class="sliderGrid">
+            <div class="sliderLeftSection2">
+              <figure><img src="asset/images/slider2.svg" alt="" /></figure>
+            </div>
+            <div class="sliderRightSection2">
+              <div class="top__text">
+                <h5 class="boldText">About Harley private limited</h5>
+                <p>
+                  Welcome to Harley Private Dental, a modern, state-of-the-art
+                  private dental practice close to Sheffield City Centre and
+                  within easy reach of Sheffield University.
+                </p>
+              </div>
+              <div class="bottom_text">
+                <p class="since">Since</p>
+                <h2 class="year">1970</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide slider2 slider3">
+          <div class="progressBar"></div>
+          <div class="sliderGrid">
+            <div class="sliderLeftSection2">
+              <figure><img src="asset/images/slider3.svg" alt="" /></figure>
+            </div>
+            <div class="sliderRightSection2">
+              <div class="bottom_text">
+                <p class="since">Since</p>
+                <h2 class="year">1970</h2>
+              </div>
+              <div class="top__text">
+                <h5 class="boldText">About Harley private limited</h5>
+                <p>
+                  Welcome to Harley Private Dental, a modern, state-of-the-art
+                  private dental practice close to Sheffield City Centre and
+                  within easy reach of Sheffield University.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="swiper-pagination"></div>
+      <div class="swiper-scrollbar"></div> -->
+    </div>
+
+    <!-- **********************************Dependencies********************************** -->
+    <!-- jQuery and plugins -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Your custom JavaScript -->
+    <script src="/asset/js/script.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#aboutmenuToggle").on("click", function () {
+          $("#aboutsidebarMenu").toggleClass("active");
+          $("#aboutmenuBackdrop").toggleClass("active");
+          $(this).toggleClass("open");
+        });
+
+        $("#aboutmenuBackdrop").on("click", function () {
+          $("#aboutsidebarMenu").removeClass("active");
+          $("#aboutmenuBackdrop").removeClass("active");
+          $("#aboutmenuToggle").removeClass("open");
+        });
+      });
+    </script>
+  </body>
+</html>
