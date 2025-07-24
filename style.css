@@ -61,7 +61,7 @@ body {
   cursor: pointer;
   display: inline-block;
 }
-
+.pb40{padding-bottom: 40px;}
 .a-btn {
   display: inline-block;
   background-color: var(--primary);
@@ -100,6 +100,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
 .container-stright {
   width: 100%;
   max-width: 1280px;
@@ -349,7 +350,6 @@ section.hero figure img {
 /*  */
 
 .dental-need-card-section {
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
   /* gap: 20px; */
@@ -780,7 +780,7 @@ section.dentalClinic {
   overflow: hidden;
   position: relative;
 } */
-
+/* 
 .dentalWrapper {
   display: flex;
   height: 590px;
@@ -792,7 +792,7 @@ section.dentalClinic {
 .dentalLeft,
 .dentalRight {
   flex: 1;
-  overflow: hidden; /* enable vertical scrolling */
+  overflow: hidden; 
   scroll-behavior: smooth;
 }
 .dentalLeft::-webkit-scrollbar,
@@ -809,9 +809,42 @@ section.dentalClinic {
 .scrollBoxRight {
   min-height: 590px;
   display: flex;
-  /* align-items: stretch; */
+  flex-direction: column;
+} */
+
+
+.dentalWrapper {
+  display: flex;
+  height: 590px;
+  /* Remove or comment out 'overflow: hidden;' here if it exists,
+     as the JS will control the body's overflow. */
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.dentalLeft,
+.dentalRight {
+  flex: 1;
+  overflow-y: scroll; /* CHANGED: Allow vertical scrolling */
+  scroll-behavior: smooth;
+}
+.dentalLeft::-webkit-scrollbar,
+.dentalRight::-webkit-scrollbar {
+  width: 0; /* Keep scrollbars visually hidden */
+}
+.dentalRight {
+  display: flex;
+  flex-direction: column-reverse;
+  scroll-behavior: smooth;
+  border-radius: 0 15px 15px 0px;
+}
+.scrollBoxLeft,
+.scrollBoxRight {
+  min-height: 590px; /* Each scroll unit height */
+  display: flex;
   flex-direction: column;
 }
+
 /* div#rightScroll {
     margin-top: -2059px;
 } */
@@ -2107,8 +2140,6 @@ body.about-us-page button#ab-menu-toggle {
     padding: 120px 20px 20px 20px;
   }
 
-  .sliderMain {
-  }
 
   .sliderRightSection2 {
     padding: 70px 40px;
