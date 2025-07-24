@@ -2095,6 +2095,42 @@ body.about-us-page button#ab-menu-toggle {
   .services_grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  p.since {
+    font-size: 20px;
+  }
+
+  h2.year {
+    font-size: 80px;
+  }
+
+  .swiper-slide.slider1 {
+    padding: 120px 20px 20px 20px;
+  }
+
+  .sliderMain {
+  }
+
+  .sliderRightSection2 {
+    padding: 70px 40px;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .progressBar {
+    top: 90%;
+  }
+
+  .slider2 .sliderRightSection2 {
+    flex-direction: column-reverse;
+  }
+
+  .slider2.slider3 .sliderRightSection2 {
+    flex-direction: column;
+  }
+
+  .sliderRightSection {
+    justify-content: center;
+  }
 }
 @media (min-width: 0px) and (max-width: 767px) {
   html {
@@ -2433,5 +2469,124 @@ body.about-us-page button#ab-menu-toggle {
 
   .bookingGrid {
     grid-template-columns: 1fr;
+  }
+  .serviceContent {
+    max-height: fit-content;
+    min-height: fit-content;
+    gap: 10px;
+  }
+
+  .service_box2:hover img.hoverImage {
+    height: -webkit-fill-available;
+  }
+
+  .serviceContentLeft h3 {
+    font-size: 20px;
+  }
+
+  .serviceContentLeft {
+    flex-direction: column;
+  }
+
+  .serviceContentRight {
+    max-width: 50%;
+  }
+  /* about page */
+  .swiper-slide.slider1 {
+    padding: 110px 20px 0 20px;
+  }
+
+  p.since {
+    font-size: 22px;
+  }
+
+  h2.year {
+    font-size: 70px;
+    margin: 20px 0;
+  }
+
+  .sliderMain {
+    flex-direction: column;
+  }
+
+  .sliderRightSection {
+    padding: 0;
+  }
+
+  .boldText {
+    font-size: 24px;
+  }
+
+  .sliderRightSection p {
+    font-size: 16px;
+  }
+
+  .progressBar {
+    display: none;
+  }
+
+  .sliderGrid {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .sliderRightSection2 {
+    padding: 70px 20px 20px 20px;
+    /* flex-direction: column-reverse;
+    justify-content: center; */
+  }
+  .slider2 .sliderRightSection2 {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .slider2.slider3 .sliderRightSection2 {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .top__text p {
+    font-size: 16px;
+  }
+
+  .sliderLeftSection2 figure img {
+    width: 100%;
+  }
+  .ab-menu-toggle {
+    left: 80%;
+  }
+}
+
+@media (width: 320px) {
+  .swiper-slide.slider1 {
+    padding: 60px 20px 0 20px;
+  }
+
+  .slider2 .sliderLeftSection2 figure img {
+    max-height: 193px;
+    object-fit: cover;
+  }
+
+  .boldText {
+    font-size: 16px;
+  }
+
+  .top__text p {
+    font-size: 14px;
+  }
+
+  p.since {
+    font-size: 16px;
+  }
+
+  h2.year {
+    font-size: 25px;
+    margin: 10px 0;
+  }
+
+  .ab-menu-toggle {
+    padding: 8px 12px;
+  }
+
+  .ab-menu-toggle::before {
+    font-size: 20px;
   }
 }
