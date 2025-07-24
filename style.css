@@ -1914,16 +1914,19 @@ p.since {
   border-color: transparent;
 }
 
-
-.sidebar-menu.active ul {
-  margin-top: 60px;
+button#ab-menu-toggle {
+  display: none;
 }
-.menu-toggle {
+body.about-us-page button#ab-menu-toggle {
+  display: block;
+}
+
+.ab-menu-toggle {
   background: #f2e2c1;
   color: var(--dark);
   border: none;
   padding: 10px 15px;
-  font-size: 0; /* Hide original text */
+  font-size: 0;
   position: fixed;
   top: 20px;
   left: 20px;
@@ -1932,21 +1935,19 @@ p.since {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
-.menu-toggle.open::before {
-  content: "✖"; /* X symbol */
-}
-
-.menu-toggle::before {
-  content: "☰"; /* Hamburger default */
+.ab-menu-toggle::before {
+  content: "☰";
   font-size: 24px;
   display: inline-block;
 }
+.ab-menu-toggle.ab-open::before {
+  content: "✖";
+}
 
-/* Sidebar menu */
-.sidebar-menu {
+.ab-sidebar-menu {
   position: fixed;
   top: 0;
-  left: -300px; /* hidden initially */
+  left: -300px;
   width: 280px;
   height: 100%;
   background: #fff;
@@ -1955,49 +1956,40 @@ p.since {
   z-index: 9998;
   padding: 50px 20px;
 }
-
-.sidebar-menu ul {
+.ab-sidebar-menu ul {
   list-style: none;
   padding: 0;
 }
-
-.sidebar-menu ul li {
+.ab-sidebar-menu ul li {
   margin: 20px 0;
 }
-
-.sidebar-menu ul li a {
+.ab-sidebar-menu ul li a {
   text-decoration: none;
   color: #333;
   font-size: 18px;
 }
-
-.sidebar-menu.active {
+.ab-sidebar-menu.ab-active {
   left: 0;
 }
-/* Backdrop hidden by default */
-.menu-backdrop {
+.ab-sidebar-menu.ab-active ul {
+  margin-top: 60px;
+}
+
+.ab-menu-backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 9990;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
 }
-
-/* When active (menu open) */
-.menu-backdrop.active {
+.ab-menu-backdrop.ab-active {
   opacity: 1;
   pointer-events: all;
-}
-/* Show toggle only on desktop */
-@media screen and (min-width: 1024px) {
-  .menu-toggle {
-    display: block;
-  }
 }
 /* Media query */
 

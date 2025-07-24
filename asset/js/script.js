@@ -96,7 +96,7 @@ lightGallery(document.getElementById("aniimated-thumbnials"), {
 });
 
 // Moblie Menu
-$(document).ready(function () {
+// $(document).ready(function () {
   const toggleBtn = document.getElementById("menuToggle");
   const mobileNav = document.getElementById("navbar");
 
@@ -126,7 +126,7 @@ $(document).ready(function () {
   } else {
     console.warn("menuToggle or navbar not found in DOM");
   }
-});
+// });
 
 //acordian
 const accordionButtons = document.querySelectorAll(".accordion-button");
@@ -138,4 +138,22 @@ accordionButtons.forEach((button) => {
   });
 });
 
+// about page menu
+const abMenuToggle = document.getElementById("ab-menu-toggle");
+const abSidebarMenu = document.getElementById("ab-sidebar-menu");
+const abMenuBackdrop = document.getElementById("ab-menu-backdrop");
 
+abMenuToggle.addEventListener("click", function () {
+  alert("Menu Toggle Clicked");
+  abSidebarMenu.classList.toggle("ab-active");
+  abMenuBackdrop.classList.toggle("ab-active");
+  this.classList.toggle("ab-open");
+});
+
+abMenuBackdrop.addEventListener("click", function () {
+  abSidebarMenu.classList.remove("ab-active");
+  abMenuBackdrop.classList.remove("ab-active");
+  abMenuToggle.classList.remove("ab-open");
+});
+
+console.log("Script loaded successfully");

@@ -23,12 +23,12 @@
   </head>
 
   <body class="about-us-page">
-    <section class="aboutHeader">
+    <section class="about-header">
       <!-- Toggle Menu Button (visible only on desktop) -->
-      <button class="menu-toggle" id="aboutmenuToggle">&#9776;</button>
+      <button class="ab-menu-toggle" id="ab-menu-toggle">&#9776;</button>
 
       <!-- Sidebar Menu -->
-      <div class="sidebar-menu" id="aboutsidebarMenu">
+      <div class="ab-sidebar-menu" id="ab-sidebar-menu">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About Us</a></li>
@@ -36,7 +36,7 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </div>
-      <div class="menu-backdrop" id="aboutmenuBackdrop"></div>
+      <div class="ab-menu-backdrop" id="ab-menu-backdrop"></div>
     </section>
     <div class="swiper about-us-swiper">
       <div class="swiper-wrapper">
@@ -117,17 +117,21 @@
     <!-- Your custom JavaScript -->
     <script src="/asset/js/script.js"></script>
     <script>
-      $(document).ready(function () {
-        $("#aboutmenuToggle").on("click", function () {
-          $("#aboutsidebarMenu").toggleClass("active");
-          $("#aboutmenuBackdrop").toggleClass("active");
-          $(this).toggleClass("open");
+      document.addEventListener("DOMContentLoaded", function () {
+        const abMenuToggle = document.getElementById("ab-menu-toggle");
+        const abSidebarMenu = document.getElementById("ab-sidebar-menu");
+        const abMenuBackdrop = document.getElementById("ab-menu-backdrop");
+
+        abMenuToggle.addEventListener("click", function () {
+          abSidebarMenu.classList.toggle("ab-active");
+          abMenuBackdrop.classList.toggle("ab-active");
+          this.classList.toggle("ab-open");
         });
 
-        $("#aboutmenuBackdrop").on("click", function () {
-          $("#aboutsidebarMenu").removeClass("active");
-          $("#aboutmenuBackdrop").removeClass("active");
-          $("#aboutmenuToggle").removeClass("open");
+        abMenuBackdrop.addEventListener("click", function () {
+          abSidebarMenu.classList.remove("ab-active");
+          abMenuBackdrop.classList.remove("ab-active");
+          abMenuToggle.classList.remove("ab-open");
         });
       });
     </script>
