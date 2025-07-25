@@ -1043,11 +1043,23 @@ section.ctaSection {
 }
 
 .ctaInnerContainer figure img {
-  border-radius: 10px;
-  transform: skewX(-12deg);
-  margin-top: -80px;
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  animation: zoomInOut 3s ease-in-out infinite;
 }
-
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .ctaText {
   display: flex;
   flex-direction: column;
@@ -2547,7 +2559,8 @@ body.about-us-page button#ab-menu-toggle {
   }
 
   .ctaInnerContainer figure img {
-    width: 100%;
+    width: 200px;
+    height: 200px;
   }
   .ctaBottomText {
     flex-direction: column;
