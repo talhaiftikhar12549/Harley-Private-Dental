@@ -1,3 +1,4 @@
+
 var testimonialSwiper = new Swiper(".testimonial-slider", {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -97,35 +98,35 @@ lightGallery(document.getElementById("aniimated-thumbnials"), {
 
 // Moblie Menu
 // $(document).ready(function () {
-  const toggleBtn = document.getElementById("menuToggle");
-  const mobileNav = document.getElementById("navbar");
+const toggleBtn = document.getElementById("menuToggle");
+const mobileNav = document.getElementById("navbar");
 
-  if (toggleBtn && mobileNav) {
-    // Toggle menu on button click
-    toggleBtn.addEventListener("click", (e) => {
-      console.log("hello");
-      e.stopPropagation(); // prevent document click
-      const isOpen = mobileNav.classList.toggle("open");
-      toggleBtn.innerHTML = isOpen ? "&times;" : "&#9776;";
-    });
+if (toggleBtn && mobileNav) {
+  // Toggle menu on button click
+  toggleBtn.addEventListener("click", (e) => {
+    console.log("hello");
+    e.stopPropagation(); // prevent document click
+    const isOpen = mobileNav.classList.toggle("open");
+    toggleBtn.innerHTML = isOpen ? "&times;" : "&#9776;";
+  });
 
-    // Close menu if click is outside
-    document.addEventListener("click", (e) => {
-      const isClickInsideMenu = mobileNav.contains(e.target);
-      const isClickOnToggle = toggleBtn.contains(e.target);
+  // Close menu if click is outside
+  document.addEventListener("click", (e) => {
+    const isClickInsideMenu = mobileNav.contains(e.target);
+    const isClickOnToggle = toggleBtn.contains(e.target);
 
-      if (
-        !isClickInsideMenu &&
-        !isClickOnToggle &&
-        mobileNav.classList.contains("open")
-      ) {
-        mobileNav.classList.remove("open");
-        toggleBtn.innerHTML = "&#9776;";
-      }
-    });
-  } else {
-    console.warn("menuToggle or navbar not found in DOM");
-  }
+    if (
+      !isClickInsideMenu &&
+      !isClickOnToggle &&
+      mobileNav.classList.contains("open")
+    ) {
+      mobileNav.classList.remove("open");
+      toggleBtn.innerHTML = "&#9776;";
+    }
+  });
+} else {
+  console.warn("menuToggle or navbar not found in DOM");
+}
 // });
 
 //acordian
@@ -156,4 +157,82 @@ abMenuBackdrop.addEventListener("click", function () {
   abMenuToggle.classList.remove("ab-open");
 });
 
-console.log("Script loaded successfully");
+// GSAP
+
+// window.addEventListener("DOMContentLoaded", () => {
+// gsap.registerPlugin(ScrollTrigger);
+// const scrollSections = document.querySelectorAll(".scroll-section");
+// scrollSections.forEach((section) => {
+//   const scrollwrapper = section.querySelector(".scrollwrapper");
+//   const items = scrollwrapper.querySelectorAll(".scrollitem");
+//   let direction = null;
+//   if (section.classList.contains("vertical-section")) {
+//     direction = "vertical";
+//   } else if (section.classList.contains("horizontal-section")) {
+//     direction = "horizontal";
+//   }
+
+//   initScroll(section, items, direction);
+// });
+// function initScroll(section, items, direction) {
+//   // Set initial transform
+//   items.forEach((item, index) => {
+//     if (index !== 0) {
+//       direction === "horizontal"
+//         ? gsap.set(item, { xPercent: 100 })
+//         : gsap.set(item, { yPercent: 100 });
+//     }
+//   });
+//   // Calculate scroll length
+//   const scrollLength = items.length * window.innerHeight;
+//   // Fix overlap issue: add padding bottom dynamically
+//   section.style.paddingBottom = `${scrollLength}px`;
+//   // Timeline animation
+//   const timeline = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: section,
+//       pin: true,
+//       start: "top top",
+//       end: `+=${scrollLength}`,
+//       scrub: 1,
+//       invalidateOnRefresh: true,
+//       // markers: true, // Uncomment for debugging
+//     },
+//     defaults: { ease: "none" },
+//   });
+//   // Animate each item
+//   items.forEach((item, index) => {
+//     timeline.to(item, {
+//       scale: 0.9,
+//       borderRadius: "10px",
+//     });
+
+//     if (index + 1 < items.length) {
+//       direction === "horizontal"
+//         ? timeline.to(items[index + 1], { xPercent: 0 }, "<")
+//         : timeline.to(items[index + 1], { yPercent: 0 }, "<");
+//     }
+//   });
+// }
+// // Animate all .section elements except scroll sections
+// document
+//   .querySelectorAll(".section:not(.vertical-section):not(.horizontal-section)")
+//   .forEach((section) => {
+//     gsap.from(section.children, {
+//       opacity: 0,
+//       y: 50,
+//       duration: 1,
+//       stagger: 0.2,
+//       ease: "power2.out",
+//       scrollTrigger: {
+//         trigger: section,
+//         start: "top 85%",
+//         toggleActions: "play none none reverse",
+//       },
+//     });
+//   });
+// });
+
+window.addEventListener("DOMContentLoaded", () => {
+  alert("Script loaded successfully!");
+});
