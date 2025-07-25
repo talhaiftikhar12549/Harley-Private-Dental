@@ -52,6 +52,10 @@ var swiper = new Swiper(".teamSwiperSlider", {
   centeredSlides: true,
   initialSlide: 2,
   slidesPerView: "auto",
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   coverflowEffect: {
     rotate: 20,
     stretch: -20,
