@@ -94,112 +94,6 @@
         </div>
       </div>
     </section>
-    <!-- <section class="our_services pb80">
-    <div class="container-stright">
-      <div class="text-center mb3">
-        <h2>General Dental Treatments We Offer</h2>
-        <p>
-          We offer a full range of general and preventive dental care designed
-          to detect and treat oral health concerns
-        </p>
-      </div>
-      <div class="services_grid">
-        <div class="service_box">
-          <img src="asset/images/air.svg" alt="" />
-          <h3>Air Abrasion Tooth Polishing</h3>
-          <p>Gentle, drill-free polishing for a brighter, healthier smile</p>
-          <a href="#">Read More <img src="asset/images/arrow.svg" alt="" /></a>
-          <img class="servicebgbox" src="asset/images/air.svg" alt="" />
-        </div>
-        <div class="service_box">
-          <img src="asset/images/dentalcrown.svg" alt="" />
-          <h3>Dental Crown</h3>
-          <p>Fill the gap from missing teeth and restore your smile</p>
-          <a href="#">Read More <img src="asset/images/arrow.svg" alt="" /></a>
-          <img class="servicebgbox" src="asset/images/dentalcrown.svg" alt="" />
-        </div>
-        <div class="service_box">
-          <img src="asset/images/dentalbridges.svg" alt="" />
-          <h3>Dental Bridges</h3>
-          <p>Protect and strengthen damaged teeth with custom-made crowns</p>
-          <a href="#">Read More <img src="asset/images/arrow.svg" alt="" /></a>
-          <img class="servicebgbox" src="asset/images/dentalbridges.svg" alt="" />
-        </div>
-        <div class="service_box">
-          <img src="asset/images/dentalhilling.svg" alt="" />
-          <h3>Dental filling</h3>
-          <p>
-            Seamless fillings to treat cavities and restore your tooth’s
-            function
-          </p>
-          <a href="#">Read More <img src="asset/images/arrow.svg" alt="" /></a>
-          <img class="servicebgbox" src="asset/images/dentalhilling.svg" alt="" />
-        </div>
-        <div class="service_box">
-          <img src="asset/images/air.svg" alt="" />
-          <h3>Air Abrasion Tooth Polishing</h3>
-          <p>Gentle, drill-free polishing for a brighter, healthier smile</p>
-          <a href="#">Read More <img src="asset/images/arrow.svg" alt="" /></a>
-          <img class="servicebgbox" src="asset/images/air.svg" alt="" />
-        </div>
-        <div class="service_box">
-          <img src="asset/images/dentalcrown.svg" alt="" />
-          <h3>Dental Crown</h3>
-          <p>Fill the gap from missing teeth and restore your smile</p>
-          <a href="#">Read More <img src="asset/images/arrow.svg" alt="" /></a>
-          <img class="servicebgbox" src="asset/images/dentalcrown.svg" alt="" />
-        </div>
-        <div class="service_box">
-          <img src="asset/images/dentalbridges.svg" alt="" />
-          <h3>Dental Bridges</h3>
-          <p>Protect and strengthen damaged teeth with custom-made crowns</p>
-          <a href="#">Read More <img src="asset/images/arrow.svg" alt="" /></a>
-          <img class="servicebgbox" src="asset/images/dentalbridges.svg" alt="" />
-        </div>
-        <div class="service_box">
-          <img src="asset/images/dentalhilling.svg" alt="" />
-          <h3>Dental filling</h3>
-          <p>
-            Seamless fillings to treat cavities and restore your tooth’s
-            function
-          </p>
-          <a href="#">Read More <img src="asset/images/arrow.svg" alt="" /></a>
-          <img class="servicebgbox" src="asset/images/dentalhilling.svg" alt="" />
-        </div>
-        <div class="service_box">
-          <img src="asset/images/air.svg" alt="" />
-          <h3>Air Abrasion Tooth Polishing</h3>
-          <p>Gentle, drill-free polishing for a brighter, healthier smile</p>
-          <a href="#">Read More <img src="asset/images/arrow.svg" alt="" /></a>
-          <img class="servicebgbox" src="asset/images/air.svg" alt="" />
-        </div>
-        <div class="service_box">
-          <img src="asset/images/dentalcrown.svg" alt="" />
-          <h3>Dental Crown</h3>
-          <p>Fill the gap from missing teeth and restore your smile</p>
-          <a href="#">Read More <img src="asset/images/arrow.svg" alt="" /></a>
-          <img class="servicebgbox" src="asset/images/dentalcrown.svg" alt="" />
-        </div>
-        <div class="service_box">
-          <img src="asset/images/dentalbridges.svg" alt="" />
-          <h3>Dental Bridges</h3>
-          <p>Protect and strengthen damaged teeth with custom-made crowns</p>
-          <a href="#">Read More <img src="asset/images/arrow.svg" alt="" /></a>
-          <img class="servicebgbox" src="asset/images/dentalbridges.svg" alt="" />
-        </div>
-        <div class="service_box">
-          <img src="asset/images/dentalhilling.svg" alt="" />
-          <h3>Dental filling</h3>
-          <p>
-            Seamless fillings to treat cavities and restore your tooth’s
-            function
-          </p>
-          <a href="#">Read More <img src="asset/images/arrow.svg" alt="" /></a>
-          <img class="servicebgbox" src="asset/images/dentalhilling.svg" alt="" />
-        </div>
-      </div>
-    </div>
-  </section> -->
 
     <section class="our_services pb80">
       <div class="container-stright">
@@ -667,7 +561,38 @@
         });
       });
     </script>
+    <script>
+      // Moblie Menu
+      const toggleBtn = document.getElementById("menuToggle");
+      const mobileNav = document.getElementById("navbar");
 
+      if (toggleBtn && mobileNav) {
+        // Toggle menu on button click
+        toggleBtn.addEventListener("click", (e) => {
+          console.log("hello");
+          e.stopPropagation(); // prevent document click
+          const isOpen = mobileNav.classList.toggle("open");
+          toggleBtn.innerHTML = isOpen ? "&times;" : "&#9776;";
+        });
+
+        // Close menu if click is outside
+        document.addEventListener("click", (e) => {
+          const isClickInsideMenu = mobileNav.contains(e.target);
+          const isClickOnToggle = toggleBtn.contains(e.target);
+
+          if (
+            !isClickInsideMenu &&
+            !isClickOnToggle &&
+            mobileNav.classList.contains("open")
+          ) {
+            mobileNav.classList.remove("open");
+            toggleBtn.innerHTML = "&#9776;";
+          }
+        });
+      } else {
+        console.warn("menuToggle or navbar not found in DOM");
+      }
+    </script>
     <!-- **********************************Dependencies********************************** -->
     <!-- jQuery and plugins -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

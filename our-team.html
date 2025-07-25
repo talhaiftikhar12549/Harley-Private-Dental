@@ -49,13 +49,6 @@
       </div>
     </header>
     <section class="hero ourteamhero">
-      <!-- <video autoplay muted loop playsinline class="hero-video">
-        <source
-          src="./asset/home/4010343-uhd_4096_2160_25fps.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video> -->
       <figure><img src="asset/images/ourteam.jpg" alt="" /></figure>
       <div class="overlay"></div>
       <div class="container">
@@ -68,36 +61,6 @@
           <a href="#" class="btn">Book Free Consultation</a>
         </div>
       </div>
-      <!-- stats -->
-      <!-- <div class="stats">
-        <div class="stats-bg-overlay"></div>
-        <div class="container">
-          <div class="stat">
-            <div class="stat-icon-div">
-              <img src="./asset/home/Vector (2).png" alt="" />
-              <p>15+</p>
-            </div>
-
-            <p>Years Of Experience</p>
-          </div>
-          <div class="stat">
-            <div class="stat-icon-div">
-              <img src="./asset/home/Vector (3).png" alt="" />
-              <p>1200+</p>
-            </div>
-
-            <p>Smiles Transformed</p>
-          </div>
-          <div class="stat">
-            <div class="stat-icon-div">
-              <img src="./asset/home/Vector (4).png" alt="" />
-              <p>360+</p>
-            </div>
-
-            <p>5-Star Google Reviews</p>
-          </div>
-        </div>
-      </div> -->
     </section>
     <section class="innerTeam pt80 pb80">
       <div class="container-stright">
@@ -293,7 +256,38 @@
         </div>
       </div>
     </footer>
+    <script>
+      // Moblie Menu
+      const toggleBtn = document.getElementById("menuToggle");
+      const mobileNav = document.getElementById("navbar");
 
+      if (toggleBtn && mobileNav) {
+        // Toggle menu on button click
+        toggleBtn.addEventListener("click", (e) => {
+          console.log("hello");
+          e.stopPropagation(); // prevent document click
+          const isOpen = mobileNav.classList.toggle("open");
+          toggleBtn.innerHTML = isOpen ? "&times;" : "&#9776;";
+        });
+
+        // Close menu if click is outside
+        document.addEventListener("click", (e) => {
+          const isClickInsideMenu = mobileNav.contains(e.target);
+          const isClickOnToggle = toggleBtn.contains(e.target);
+
+          if (
+            !isClickInsideMenu &&
+            !isClickOnToggle &&
+            mobileNav.classList.contains("open")
+          ) {
+            mobileNav.classList.remove("open");
+            toggleBtn.innerHTML = "&#9776;";
+          }
+        });
+      } else {
+        console.warn("menuToggle or navbar not found in DOM");
+      }
+    </script>
     <!-- **********************************Dependencies********************************** -->
     <!-- jQuery and plugins -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

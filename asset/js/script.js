@@ -96,38 +96,36 @@ lightGallery(document.getElementById("aniimated-thumbnials"), {
   thumbnail: true,
 });
 
-// Moblie Menu
-// $(document).ready(function () {
-const toggleBtn = document.getElementById("menuToggle");
-const mobileNav = document.getElementById("navbar");
+// // Moblie Menu
+// const toggleBtn = document.getElementById("menuToggle");
+// const mobileNav = document.getElementById("navbar");
 
-if (toggleBtn && mobileNav) {
-  // Toggle menu on button click
-  toggleBtn.addEventListener("click", (e) => {
-    console.log("hello");
-    e.stopPropagation(); // prevent document click
-    const isOpen = mobileNav.classList.toggle("open");
-    toggleBtn.innerHTML = isOpen ? "&times;" : "&#9776;";
-  });
+// if (toggleBtn && mobileNav) {
+//   // Toggle menu on button click
+//   toggleBtn.addEventListener("click", (e) => {
+//     console.log("hello");
+//     e.stopPropagation(); // prevent document click
+//     const isOpen = mobileNav.classList.toggle("open");
+//     toggleBtn.innerHTML = isOpen ? "&times;" : "&#9776;";
+//   });
 
-  // Close menu if click is outside
-  document.addEventListener("click", (e) => {
-    const isClickInsideMenu = mobileNav.contains(e.target);
-    const isClickOnToggle = toggleBtn.contains(e.target);
+//   // Close menu if click is outside
+//   document.addEventListener("click", (e) => {
+//     const isClickInsideMenu = mobileNav.contains(e.target);
+//     const isClickOnToggle = toggleBtn.contains(e.target);
 
-    if (
-      !isClickInsideMenu &&
-      !isClickOnToggle &&
-      mobileNav.classList.contains("open")
-    ) {
-      mobileNav.classList.remove("open");
-      toggleBtn.innerHTML = "&#9776;";
-    }
-  });
-} else {
-  console.warn("menuToggle or navbar not found in DOM");
-}
-// });
+//     if (
+//       !isClickInsideMenu &&
+//       !isClickOnToggle &&
+//       mobileNav.classList.contains("open")
+//     ) {
+//       mobileNav.classList.remove("open");
+//       toggleBtn.innerHTML = "&#9776;";
+//     }
+//   });
+// } else {
+//   console.warn("menuToggle or navbar not found in DOM");
+// }
 
 //acordian
 const accordionButtons = document.querySelectorAll(".accordion-button");
@@ -233,6 +231,5 @@ abMenuBackdrop.addEventListener("click", function () {
 //   });
 // });
 
-window.addEventListener("DOMContentLoaded", () => {
-  alert("Script loaded successfully!");
-});
+
+  console.log("Script loaded successfully!");

@@ -2122,6 +2122,7 @@ body.about-us-page button#ab-menu-toggle {
   .scrollitem {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
   .item_content,
@@ -2698,6 +2699,13 @@ body.about-us-page button#ab-menu-toggle {
   .ab-menu-toggle {
     left: 80%;
   }
+  .ourTeamDetailGrid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+}
+section.expertsSection.pt80 .text-banner {
+    padding: 0 20px;
+}
 }
 
 @media (width: 320px) {
